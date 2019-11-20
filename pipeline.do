@@ -16,14 +16,14 @@ add wave -noupdate -divider ALU
 add wave -noupdate -label A -radix unsigned /pipeline_tb/dutPipeline/iALU/A
 add wave -noupdate -label B -radix unsigned /pipeline_tb/dutPipeline/iALU/B
 add wave -noupdate -label OP -radix unsigned /pipeline_tb/dutPipeline/iALU/OP
-add wave -noupdate -label RESULT -radix unsigned /pipeline_tb/dutPipeline/iALU/RESULT
+add wave -noupdate -label RESULT -radix decimal /pipeline_tb/dutPipeline/iALU/RESULT
 add wave -noupdate -label Z /pipeline_tb/dutPipeline/iALU/Z
 add wave -noupdate -divider {DATA MEMORY}
 add wave -noupdate -label MEMORY /pipeline_tb/dataMem/memory
 add wave -noupdate -divider PC
 add wave -noupdate -label {Next Address} -radix decimal /pipeline_tb/dutPipeline/pc/Q
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {329000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {90000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 209
@@ -39,4 +39,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {160200 ps} {344200 ps}
+WaveRestoreZoom {15200 ps} {199200 ps}

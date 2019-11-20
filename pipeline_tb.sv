@@ -163,7 +163,7 @@ initial begin
 	OP = ADDI; //ADDI
 	RS = 1;
 	RT = 10;
-	IMMEDIATE = 1;
+	IMMEDIATE = -3;
 	instruction = {OP,RS,RT,IMMEDIATE};
 ##1
 	// SUBI

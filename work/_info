@@ -10,69 +10,69 @@ cModel Technology
 dC:/intelFPGA_lite/18.1/mips_2nd
 vALU
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1574124634
+Z1 !s110 1574209842
 !i10b 1
-!s100 h`8YK>M4_jo`mj7?<^db=0
-INz:WT6h1aKZ2LI9b@`T3=2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 iW8zi9[N<C^Lz<EJ@DB@<1
+ILdH>=HeS8lMan00A_LHXI3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 ALU_sv_unit
 S1
-Z2 dC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject
-w1571699730
-8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/ALU.sv
-FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/ALU.sv
+Z3 dC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject
+w1574209329
+8C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\ALU.sv
+FC:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\ALU.sv
 L0 1
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1574124632.000000
-!s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/ALU.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/ALU.sv|
+!s108 1574209840.000000
+!s107 C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\ALU.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\ALU.sv|
 !i113 1
-Z4 o-work work -sv
-Z5 tCvgOpt 0
+Z5 o-work work -sv
+Z6 tCvgOpt 0
 n@a@l@u
 vCAST_16
 R0
-Z6 !s110 1574124635
+R1
 !i10b 1
 !s100 eo:K<Ym=ane7gbc>VoGPn1
 IHZXVkXW:SHk[UB`JR]Bla0
-R1
+R2
 !s105 CAST_16_sv_unit
 S1
-R2
+R3
 w1570986124
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CAST_16.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CAST_16.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-Z7 !s108 1574124635.000000
+Z7 !s108 1574209842.000000
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CAST_16.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CAST_16.sv|
 !i113 1
-R4
 R5
+R6
 n@c@a@s@t_16
 vCONTROL_UNIT
 R0
-R6
+R1
 !i10b 1
 !s100 U8126;IH_cXVUQE8JlEmb1
 ILU?hoJ^h_l]J2_BLQM<e42
-R1
+R2
 !s105 CONTROL_UNIT_sv_unit
 S1
-R2
+R3
 w1572001932
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CONTROL_UNIT.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CONTROL_UNIT.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
@@ -80,72 +80,72 @@ R7
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CONTROL_UNIT.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/CONTROL_UNIT.sv|
 !i113 1
-R4
 R5
+R6
 n@c@o@n@t@r@o@l_@u@n@i@t
 vDATA_MEMORY
 R0
-R6
+Z8 !s110 1574209843
 !i10b 1
 !s100 =AXTZYYRmIU2R[Nod?1gC3
 IAV5TEUz7<9ojSX3D2gN>Y3
-R1
+R2
 !s105 DATA_MEMORY_sv_unit
 S1
-R2
+R3
 w1571587870
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/DATA_MEMORY.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/DATA_MEMORY.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R7
+Z9 !s108 1574209843.000000
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/DATA_MEMORY.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/DATA_MEMORY.sv|
 !i113 1
-R4
 R5
+R6
 n@d@a@t@a_@m@e@m@o@r@y
 Xfunc_pkg
 R0
-Z8 !s110 1574124636
+R8
 !i10b 1
 !s100 YfKBETfiY>EkA2g5BHQa72
 IgL:HR?`hQWhF?zNl`O@;b0
 VgL:HR?`hQWhF?zNl`O@;b0
 S1
-R2
+R3
 w1572224208
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/func_pkg.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/func_pkg.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-Z9 !s108 1574124636.000000
+R9
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/func_pkg.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/func_pkg.sv|
 !i113 1
-R4
 R5
+R6
 vIM
 R0
 R8
 !i10b 1
 !s100 2=ce@42lPXJM1zHA_hAC>2
 I[4>8e@7@4Q:Xnon[zY:g30
-R1
+R2
 !s105 IM_sv_unit
 S1
-R2
+R3
 w1571696676
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/IM.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/IM.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
@@ -153,8 +153,8 @@ R9
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/IM.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/IM.sv|
 !i113 1
-R4
 R5
+R6
 n@i@m
 vMUX_2_1
 R0
@@ -162,15 +162,15 @@ R8
 !i10b 1
 !s100 VYIl`ZaLR@MWBYQNDWeU30
 I6V5HL:n14cSmb]2II]RX_1
-R1
+R2
 !s105 MUX_2_1_sv_unit
 S1
-R2
+R3
 w1571585966
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_2_1.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_2_1.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
@@ -178,8 +178,8 @@ R9
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_2_1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_2_1.sv|
 !i113 1
-R4
 R5
+R6
 n@m@u@x_2_1
 vMUX_4_1
 R0
@@ -187,15 +187,15 @@ R8
 !i10b 1
 !s100 BLmSfDAbz@zkNHZ??J`KM0
 I4:kD]WD>nV5>CDbLga7VB0
-R1
+R2
 !s105 MUX_4_1_sv_unit
 S1
-R2
+R3
 w1571594716
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_4_1.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_4_1.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
@@ -203,33 +203,33 @@ R9
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_4_1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/MUX_4_1.sv|
 !i113 1
-R4
 R5
+R6
 n@m@u@x_4_1
 vPADDING
 R0
-Z10 !s110 1574124637
+Z10 !s110 1574209844
 !i10b 1
 !s100 >BAO]OGA[o613g7B=SKmE2
 I7Z_^MZd6Fk^<NE[210eWT2
-R1
+R2
 !s105 PADDING_sv_unit
 S1
-R2
+R3
 w1570985704
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PADDING.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PADDING.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R9
+Z11 !s108 1574209844.000000
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PADDING.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PADDING.sv|
 !i113 1
-R4
 R5
+R6
 n@p@a@d@d@i@n@g
 vPC
 R0
@@ -237,74 +237,74 @@ R10
 !i10b 1
 !s100 8[b[a[8j^b6cfj6;WGnD[2
 IZ]Ve0F4[UWzQ82bTV5ad>3
-R1
+R2
 !s105 PC_sv_unit
 S1
-R2
+R3
 w1571524184
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PC.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PC.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-!s108 1574124637.000000
+R11
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PC.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/PC.sv|
 !i113 1
-R4
 R5
+R6
 n@p@c
 vpipeline
 R0
-Z11 !s110 1574124638
+!s110 1574209845
 !i10b 1
 !s100 K4H]_Nfa@RnA>HAck0U:H3
-IX6QiY[72mEAEcF76L5Pm_0
-R1
+I?4P3^Ync851JZHfY7zmKn2
+R2
 !s105 pipeline_sv_unit
 S1
-R2
-w1574124556
-8C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline.sv
-FC:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline.sv
-L0 1
 R3
+w1574124556
+8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/pipeline.sv
+FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/pipeline.sv
+L0 1
+R4
 r1
 !s85 0
 31
-Z12 !s108 1574124638.000000
-!s107 C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline.sv|
+Z12 !s108 1574209845.000000
+!s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/pipeline.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/pipeline.sv|
 !i113 1
-R4
 R5
+R6
 vpipeline_tb
 R0
 Z13 DXx4 work 8 func_pkg 0 22 gL:HR?`hQWhF?zNl`O@;b0
 DXx4 work 19 pipeline_tb_sv_unit 0 22 nN<gOO8;H[NB:b0]niXkB3
-R1
+R2
 r1
 !s85 0
 31
 !i10b 1
-!s100 GA[fbOb<SQIS`aQiGb_3K0
-IEW=_[S3R^Cz1K3PX8PVO<1
+!s100 ;1Zi>]X=>adiS@fiO]Q6g2
+I0ILY>[FiTW@B0=WHaF@^41
 !s105 pipeline_tb_sv_unit
 S1
-R2
-Z14 w1574124621
+R3
+Z14 w1574209825
 Z15 8C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline_tb.sv
 Z16 FC:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline_tb.sv
 L0 10
-R3
+R4
 R12
 Z17 !s107 C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline_tb.sv|
 Z18 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\pipeline_tb.sv|
 !i113 1
-R4
 R5
+R6
 Xpipeline_tb_sv_unit
 R0
 R13
@@ -317,90 +317,90 @@ r1
 InN<gOO8;H[NB:b0]niXkB3
 !i103 1
 S1
-R2
+R3
 R14
 R15
 R16
 L0 2
-R3
+R4
 R12
 R17
 R18
 !i113 1
-R4
 R5
+R6
 vREGFILE
 R0
-R11
+R10
 !i10b 1
 !s100 4AJ7];dbM=OXJ1nbPYc452
 I7a;4QIWg@o8fA78Z1OEKE3
-R1
+R2
 !s105 RegFile_sv_unit
 S1
-R2
+R3
 w1572045084
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/RegFile.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/RegFile.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R12
+R11
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/RegFile.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/RegFile.sv|
 !i113 1
-R4
 R5
+R6
 n@r@e@g@f@i@l@e
 vSIGN_EXTEND
 R0
-R11
+R10
 !i10b 1
-!s100 `R[CRdZK5aS=fKFH]5NLi2
-ITc8;K]Z:?IkjfEPU?];KP3
-R1
+!s100 UlYT3>bHZfW3`oOXkJlzX0
+IL6VmDlWzdOzj@^E:X@?K90
+R2
 !s105 SIGN_EXT_sv_unit
 S1
-R2
-w1571588484
-8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXT.sv
-FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXT.sv
-L0 1
 R3
+w1574209738
+8C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\SIGN_EXT.sv
+FC:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\SIGN_EXT.sv
+L0 1
+R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXT.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXT.sv|
+R11
+!s107 C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\SIGN_EXT.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\ggalindo\Documents\GuruGulundu\ITESM\ComputersArchitecture\FinalProject\SIGN_EXT.sv|
 !i113 1
-R4
 R5
+R6
 n@s@i@g@n_@e@x@t@e@n@d
 vSIGN_EXTEND_26
 R0
-R11
+R10
 !i10b 1
 !s100 9]UDi:KMK3nZ^STD`cQj=1
 IW26nSU_CiE6f0P1^D`8S42
-R1
+R2
 !s105 SIGN_EXTEND_26_sv_unit
 S1
-R2
+R3
 w1571588618
 8C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXTEND_26.sv
 FC:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXTEND_26.sv
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R12
+R11
 !s107 C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXTEND_26.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/ggalindo/Documents/GuruGulundu/ITESM/ComputersArchitecture/FinalProject/SIGN_EXTEND_26.sv|
 !i113 1
-R4
 R5
+R6
 n@s@i@g@n_@e@x@t@e@n@d_26

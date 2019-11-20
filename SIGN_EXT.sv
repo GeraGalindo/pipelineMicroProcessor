@@ -4,7 +4,8 @@ module SIGN_EXTEND
             	);
 
 always_comb begin
-	S_OUT = {16'b0, S_IN};
+	//S_OUT = {16'b0, S_IN};
+	S_OUT = {{16{S_IN[15]}}, S_IN};
 end
 
 

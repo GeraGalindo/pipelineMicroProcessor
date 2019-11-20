@@ -1,9 +1,9 @@
 module ALU#(parameter N=32)
 (
-input logic [N-1:0]A,          
-input logic [N-1:0]B,
+input logic signed [N-1:0]A,          
+input logic signed [N-1:0]B,
 input logic [4:0]OP, 
-output logic [N-1:0]RESULT,
+output logic signed [N-1:0]RESULT,
 output logic Z
 );
 
