@@ -48,7 +48,6 @@ logic [31:0]QS_A;
 logic [31:0]ID_QT_B;
 logic [31:0]ID_muxA;
 logic [31:0]ID_muxB;
-logic [31:0]MEM_DM_Q;
 logic [31:0]ID_NEXT_PC;
 logic [31:0]ZERO32;
 
@@ -61,6 +60,21 @@ logic [31:0]EX_muxA;
 logic [31:0]EX_muxB;
 logic [31:0]EX_ALU_RESULT;
 logic EX_ALU_Z;
+logic [15:0]EX_CAST16;
+logic [15:0]EX_DM_ADDR;
+logic [1:0]EX_RF_D_SEL;
+
+logic MEM_DM_WE;
+logic [31:0]MEM_ALU_RES;	
+logic [31:0]MEM_muxB;
+logic [15:0]MEM_DM_ADDR;
+logic [1:0]MEM_RF_D_SEL;
+logic [31:0]MEM_DM_Q;
+
+logic [1:0]WB_RF_D_SEL;
+logic [31:0]WB_DM_Q;
+
+logic [31:0]WB_ALU_RES;
 
 
 // INSTRUCTION FETCH STAGE
@@ -114,7 +128,7 @@ MUX_4_1#(.N(5)) RF_rd_MUX(
 	.IN_1(ID_RD),.IN_2(ID_RT),.IN_3(FIXED31),.IN_4(ZERO5),.SEL(ID_RD_SEL),
 	.OUT(muxRFRD));
 MUX_4_1 RF_D_MUX(
-	.IN_1(EX_ALU_RESULT),.IN_2(MEM_DM_Q),.IN_3(ID_NEXT_PC),.IN_4(ZERO32),.SEL(ID_RF_D_SEL),
+	.IN_1(WB_ALU_RES),.IN_2(WB_DM_Q),.IN_3(ID_NEXT_PC),.IN_4(ZERO32),.SEL(WB_RF_D_SEL),
 	.OUT(muxRFD));
 REGFILE regFile(
 	.clk(clk),.we(ID_RF_WE),.ret_enable(ID_ret_enable),
@@ -137,6 +151,7 @@ MUX_2_1 B_MUX(
 ID_EX ID_EX_REGISTER(
 	.clk(clk),
 	.ID_ret_enable(ID_ret_enable),
+	.ID_RF_D_SEL(ID_RF_D_SEL),
 	.ID_DM_WE(ID_DM_WE),
 	.ID_ALU_OP(ID_ALU_OP),
 	.ID_DM_ADDR_SEL(ID_DM_ADDR_SEL),
@@ -144,6 +159,7 @@ ID_EX ID_EX_REGISTER(
 	.ID_muxA(ID_muxA),
 	.ID_muxB(ID_muxB),
 	.EX_ret_enable(EX_ret_enable),
+	.EX_RF_D_SEL(EX_RF_D_SEL),
 	.EX_DM_WE(EX_DM_WE),
 	.EX_ALU_OP(EX_ALU_OP),
 	.EX_DM_ADDR_SEL(EX_DM_ADDR_SEL),
@@ -158,6 +174,49 @@ ALU alu(
 	.OP(EX_ALU_OP),
 	.RESULT(EX_ALU_RESULT),
 	.Z(EX_ALU_Z));
+CAST_16 cast16(
+	.S_IN(EX_muxA),
+	.S_OUT(EX_CAST16));
+MUX_2_1#(.N(16)) DM_ADDR_MUX(
+	.IN_1(EX_CAST16),
+	.IN_2(EX_IMMEDIATE),
+	.SEL(EX_DM_ADDR_SEL),
+	.OUT(EX_DM_ADDR));
+	
+// EX / MEM REGISTER
+EX_MEM EX_MEM_REGISTER(
+	.clk(clk),
+	.EX_DM_WE(EX_DM_WE),
+	.EX_ALU_RES(EX_ALU_RESULT),
+	.EX_muxB(EX_muxB),
+	.EX_DM_ADDR(EX_DM_ADDR),
+	.EX_RF_D_SEL(EX_RF_D_SEL),
+	.MEM_DM_WE(MEM_DM_WE),
+	.MEM_ALU_RES(MEM_ALU_RES),
+	.MEM_muxB(MEM_muxB),
+	.MEM_DM_ADDR(MEM_DM_ADDR),
+	.MEM_RF_D_SEL(MEM_RF_D_SEL));
+	
+// MEM STAGE
+DATA_MEMORY dataMem(
+	.clk(clk),
+	.WE(MEM_DM_WE),
+	.D(MEM_muxB),
+	.ADDR(MEM_DM_ADDR),
+	.Q(MEM_DM_Q));
+	
+// MEM / WB REGISTER
+MEM_WB Mem_WriteBack(
+	.clk(clk),
+	.MEM_ALU_RES(MEM_ALU_RES),
+	.MEM_DM_Q(MEM_DM_Q),
+	.MEM_RF_D_SEL(MEM_RF_D_SEL),
+	.WB_ALU_RES(WB_ALU_RES),
+	.WB_DM_Q(WB_DM_Q),
+	.WB_RF_D_SEL(WB_RF_D_SEL));
+
+	
+	
 
 always_comb begin
 	// IF STAGE RELATED SIGNALS
