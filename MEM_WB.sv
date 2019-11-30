@@ -6,7 +6,7 @@ module MEM_WB(
 	
 	output logic [31:0]WB_ALU_RES,
 	output logic [31:0]WB_DM_Q,
-	output logic WB_RF_D_SEL,
+	output logic WB_RF_D_SEL
 );
 
 `define SIMULATION
