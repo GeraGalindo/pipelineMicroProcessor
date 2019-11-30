@@ -8,7 +8,7 @@ module EX_MEM(
 	input logic EX_RF_D_SEL,
 	
 	output logic MEM_DM_WE,
-	output logic MEM_AL_RES,	
+	output logic MEM_ALU_RES,	
 	output logic [31:0]MEM_muxB,
 	output logic [15:0]MEM_DM_ADDR,
 	output logic MEM_NEXT_PC,
@@ -18,7 +18,7 @@ module EX_MEM(
 `define SIMULATION
 `ifdef SIMULATION
 initial begin
-	MEM_AL_RES = 0;
+	MEM_ALU_RES = 0;
 	MEM_DM_WE = 0;
 	MEM_DM_ADDR = 0;
 	MEM_muxB = 0;
@@ -29,7 +29,7 @@ end
 
 always @(posedge clk) begin
 	MEM_DM_WE = EX_DM_WE;
-	MEM_AL_RES = EX_ALU_RES;
+	MEM_ALU_RES = EX_ALU_RES;
 	MEM_muxB = EX_muxB;
 	MEM_DM_ADDR = EX_DM_ADDR;
 	MEM_NEXT_PC = EX_NEXT_PC;
