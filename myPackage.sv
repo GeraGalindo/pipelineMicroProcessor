@@ -1,4 +1,4 @@
-package func_pkg;
+package myPackage;
 
 typedef enum logic [5:0] { 
 	RType = 0,
@@ -20,7 +20,7 @@ typedef enum logic [5:0] {
 	BNE = 44
 } opcode_t;
 
-typedef enum logic [4:0] { 
+typedef enum logic [5:0] { 
 	ADD = 0,
 	SUB = 1, 
 	AND = 2, 

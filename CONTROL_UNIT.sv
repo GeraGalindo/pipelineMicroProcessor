@@ -1,18 +1,19 @@
-module CONTROL_UNIT 
-	       ( input  logic [5:0] FUNC,
-	     	 input  logic [5:0] OPCODE,
-	     	 input  logic ALU_Z,
-	     	 output logic [4:0] ALU_OP,
-			 output logic RF_WE,
-			 output logic DM_WE,
-	     	 output logic A_SEL,
-	     	 output logic B_SEL,
-	     	 output logic [1:0]PC_SEL,
-	     	 output logic [1:0]RD_SEL,
-	     	 output logic [1:0]RF_D_SEL,
-			 output logic DM_ADDR_SEL,
-			 output logic ret_enable
-            	);
+module CONTROL_UNIT( 
+	input  logic [5:0] FUNC,
+	input  logic [5:0] OPCODE,
+	input  logic ALU_Z,
+	input  logic BRANCH,
+	output logic [4:0] ALU_OP,
+	output logic RF_WE,
+	output logic DM_WE,
+	output logic A_SEL,
+	output logic B_SEL,
+	output logic [1:0]PC_SEL,
+	output logic [1:0]RD_SEL,
+	output logic [1:0]RF_D_SEL,
+	output logic DM_ADDR_SEL,
+	output logic ret_enable
+);
 
 logic [1:0]insType; // To hold the type of instruction
 logic [3:0]subOP;
@@ -92,7 +93,7 @@ always_comb begin
 			5: begin // SLL
 				RF_WE = 1;
 				DM_WE = 0;
-				A_SEL = 0;
+				A_SEL = 1;
 				B_SEL = 0;
 				PC_SEL = 0;
 				RD_SEL = 0;
@@ -103,7 +104,7 @@ always_comb begin
 			6: begin //SRL
 				RF_WE = 1;
 				DM_WE = 0;
-				A_SEL = 0;
+				A_SEL = 1;
 				B_SEL = 0;
 				PC_SEL = 0;
 				RD_SEL = 0;
@@ -114,7 +115,7 @@ always_comb begin
 			7: begin
 				RF_WE = 1;
 				DM_WE = 0;
-				A_SEL = 0;
+				A_SEL = 1;
 				B_SEL = 0;
 				PC_SEL = 0;
 				RD_SEL = 0;
@@ -125,7 +126,7 @@ always_comb begin
 			8: begin
 				RF_WE = 1;
 				DM_WE = 0;
-				A_SEL = 0;
+				A_SEL = 1;
 				B_SEL = 0;
 				PC_SEL = 0;
 				RD_SEL = 0;

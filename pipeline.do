@@ -1,32 +1,52 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -divider Instruction
-add wave -noupdate -label instruction /pipeline_tb/instruction
-add wave -noupdate -label clk /pipeline_tb/clk
-add wave -noupdate -label OPCODE /pipeline_tb_sv_unit::OP
-add wave -noupdate -label SA -radix decimal /pipeline_tb/SA
-add wave -noupdate -label RS -radix unsigned /pipeline_tb/RS
-add wave -noupdate -label RT -radix unsigned /pipeline_tb/RT
-add wave -noupdate -label RD -radix decimal /pipeline_tb/RD
-add wave -noupdate -label FUNC /pipeline_tb_sv_unit::FUNC
-add wave -noupdate -label IMMEDIATE -radix decimal /pipeline_tb/IMMEDIATE
-add wave -noupdate -divider {REGISTER FILE}
-add wave -noupdate -label RegFile -childformat {{{/pipeline_tb/dutPipeline/regFile/reg_file[0]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[1]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[2]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[3]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[4]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[5]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[6]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[7]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[8]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[9]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[10]} -radix decimal} {{/pipeline_tb/dutPipeline/regFile/reg_file[30]} -radix unsigned} {{/pipeline_tb/dutPipeline/regFile/reg_file[31]} -radix unsigned}} -subitemconfig {{/pipeline_tb/dutPipeline/regFile/reg_file[0]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[1]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[2]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[3]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[4]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[5]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[6]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[7]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[8]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[9]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[10]} {-height 15 -radix decimal} {/pipeline_tb/dutPipeline/regFile/reg_file[30]} {-height 15 -radix unsigned} {/pipeline_tb/dutPipeline/regFile/reg_file[31]} {-height 15 -radix unsigned}} /pipeline_tb/dutPipeline/regFile/reg_file
-add wave -noupdate -divider ALU
-add wave -noupdate -label A -radix unsigned /pipeline_tb/dutPipeline/iALU/A
-add wave -noupdate -label B -radix unsigned /pipeline_tb/dutPipeline/iALU/B
-add wave -noupdate -label OP -radix unsigned /pipeline_tb/dutPipeline/iALU/OP
-add wave -noupdate -label RESULT -radix decimal /pipeline_tb/dutPipeline/iALU/RESULT
-add wave -noupdate -label Z /pipeline_tb/dutPipeline/iALU/Z
-add wave -noupdate -divider {DATA MEMORY}
-add wave -noupdate -label MEMORY /pipeline_tb/dataMem/memory
-add wave -noupdate -divider PC
-add wave -noupdate -label {Next Address} -radix decimal /pipeline_tb/dutPipeline/pc/Q
+add wave -noupdate -label ADDRESS -radix hexadecimal /iFetch_TestBench/DUT_INST_FETCH/instructionMemory/ADDRESS
+add wave -noupdate -label FUNC /iFetch_TestBench/DUT_INST_FETCH/instructionMemory/FUNC
+add wave -noupdate -label OPCODE /iFetch_TestBench/DUT_INST_FETCH/instructionMemory/OPCODE
+add wave -noupdate -label RS -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/instructionMemory/RS
+add wave -noupdate -label RT -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/instructionMemory/RT
+add wave -noupdate -label RD -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/instructionMemory/RD
+add wave -noupdate -divider {iFETCH Inputs}
+add wave -noupdate -label IF_ret_enable -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_ret_enable
+add wave -noupdate -label IF_RF_D_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_RF_D_SEL
+add wave -noupdate -label IF_DM_WE -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_DM_WE
+add wave -noupdate -label IF_A_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_A_SEL
+add wave -noupdate -label IF_B_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_B_SEL
+add wave -noupdate -label IF_RF_WE -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_RF_WE
+add wave -noupdate -label IF_RD_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_RD_SEL
+add wave -noupdate -label IF_ALU_OP -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_ALU_OP
+add wave -noupdate -label IF_DM_ADDR_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_DM_ADDR_SEL
+add wave -noupdate -label IF_INSTRUCTION -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/IF_INSTRUCTION
+add wave -noupdate -divider {iDECODE Stage}
+add wave -noupdate -label ID_ret_enable /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_ret_enable
+add wave -noupdate -label ID_RF_D_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_RF_D_SEL
+add wave -noupdate -label ID_DM_WE -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_DM_WE
+add wave -noupdate -label ID_A_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_A_SEL
+add wave -noupdate -label ID_B_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_B_SEL
+add wave -noupdate -label ID_RF_WE -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_RF_WE
+add wave -noupdate -label ID_RD_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_RD_SEL
+add wave -noupdate -label ID_ALU_OP -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_ALU_OP
+add wave -noupdate -label ID_DM_ADDR_SEL -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_DM_ADDR_SEL
+add wave -noupdate -label ID_INSTRUCTION -radix decimal /iFetch_TestBench/DUT_INST_FETCH/IF_ID_REGISTER/ID_INSTRUCTION
+add wave -noupdate -label A_MUX/OUT -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/A_MUX/OUT
+add wave -noupdate -label B_MUX/OUT -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/B_MUX/OUT
+add wave -noupdate -label RF_rd_MUX/OUT -radix unsigned /iFetch_TestBench/DUT_INST_FETCH/RF_rd_MUX/OUT
+add wave -noupdate -label {R[31]} -radix unsigned {/iFetch_TestBench/DUT_INST_FETCH/regFile/reg_file[31]}
+add wave -noupdate -divider {EXECUTE Stage}
+add wave -noupdate -label ID_muxA -radix decimal /iFetch_TestBench/DUT_INST_FETCH/ID_EX_REGISTER/ID_muxA
+add wave -noupdate -label ID_muxB -radix decimal /iFetch_TestBench/DUT_INST_FETCH/ID_EX_REGISTER/ID_muxB
+add wave -noupdate -label EX_ALU_OP -radix decimal /iFetch_TestBench/DUT_INST_FETCH/ID_EX_REGISTER/EX_ALU_OP
+add wave -noupdate -label EX_muxA -radix decimal /iFetch_TestBench/DUT_INST_FETCH/ID_EX_REGISTER/EX_muxA
+add wave -noupdate -label EX_muxB -radix decimal /iFetch_TestBench/DUT_INST_FETCH/ID_EX_REGISTER/EX_muxB
+add wave -noupdate -label {ALU A} /iFetch_TestBench/DUT_INST_FETCH/alu/A
+add wave -noupdate -label {ALU B} /iFetch_TestBench/DUT_INST_FETCH/alu/B
+add wave -noupdate -label ALU_OP /iFetch_TestBench/DUT_INST_FETCH/alu/OP
+add wave -noupdate -label ALU_RESULT /iFetch_TestBench/DUT_INST_FETCH/alu/RESULT
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {90000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {75500 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 150
-configure wave -valuecolwidth 209
+configure wave -namecolwidth 161
+configure wave -valuecolwidth 96
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -39,4 +59,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {15200 ps} {199200 ps}
+WaveRestoreZoom {62500 ps} {123100 ps}
