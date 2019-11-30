@@ -12,9 +12,9 @@ module MEM_WB(
 `define SIMULATION
 `ifdef SIMULATION
 initial begin
-	AL_RES = 0;
-	DM_Q = 0;
-	RF_D_SEL = 0;
+	WB_ALU_RES = 0;
+	WB_DM_Q = 0;
+	WB_RF_D_SEL = 0;
 end
 `endif
 
