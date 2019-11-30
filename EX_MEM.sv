@@ -18,11 +18,11 @@ module EX_MEM(
 `define SIMULATION
 `ifdef SIMULATION
 initial begin
-	Mem_AL_RES = 0;
+	MEM_AL_RES = 0;
 	MEM_DM_WE = 0;
 	MEM_DM_ADDR = 0;
 	MEM_muxB = 0;
-	MEM_NEXT_PC;
+	MEM_NEXT_PC = 0;
 	MEM_RF_D_SEL = 0;
 end
 `endif

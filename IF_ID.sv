@@ -10,7 +10,7 @@ module IF_ID(
 	input logic [4:0]IF_ALU_OP,
 	input logic IF_DM_ADDR_SEL,
 	input logic [31:0]IF_INSTRUCTION,
-	input logic IF_NEXT_PC;
+	input logic IF_NEXT_PC,
 	
 	output logic ID_ret_enable,
 	output logic [1:0]ID_RF_D_SEL,

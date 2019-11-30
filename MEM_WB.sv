@@ -2,12 +2,12 @@ module MEM_WB(
 	input logic clk,
 	input logic [31:0]MEM_ALU_RES,
 	input logic [31:0]MEM_DM_Q,
-	input logic MEM_NEXT_PC;
+	input logic MEM_NEXT_PC,
 	input logic MEM_RF_D_SEL,
 	
 	output logic [31:0]WB_ALU_RES,
 	output logic [31:0]WB_DM_Q,
-	output logic WB_NEXT_PC;
+	output logic WB_NEXT_PC,
 	output logic WB_RF_D_SEL
 );
 
