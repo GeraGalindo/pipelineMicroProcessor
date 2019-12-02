@@ -142,7 +142,7 @@ always_comb begin
 			IMMEDIATE = 8;
 			INSTRUCTION = {OPCODE,RS,RT,IMMEDIATE};
 		end
-		15: begin // SWR RT, RS, IMMEDIATE  ->   RT = {16'b0, IMMEDIATE[15:0]}
+		16: begin // SWR RT, RS, IMMEDIATE  ->   RT = {16'b0, IMMEDIATE[15:0]}
 			OPCODE = SWR;
 			RS = 2;
 			RT = 10;
